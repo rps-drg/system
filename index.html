@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites - Fine Dining Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Delicious Bites</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#reserve" class="btn-reserve">Reserve Table</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Delicious Bites</h1>
+            <p>Experience culinary excellence in an elegant atmosphere</p>
+            <button class="btn btn-primary" onclick="document.getElementById('reserve').scrollIntoView()">Book a Table</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>
+                Delicious Bites is a premier fine dining establishment dedicated to delivering an unforgettable culinary 
+                experience. Our award-winning chefs craft each dish with passion and precision, using only the finest 
+                ingredients sourced from local and international suppliers.
+            </p>
+            <div class="features">
+                <div class="feature">
+                    <h3>🍽️ Premium Cuisine</h3>
+                    <p>Expertly prepared dishes from around the world</p>
+                </div>
+                <div class="feature">
+                    <h3>🍷 Fine Wine Selection</h3>
+                    <p>Curated collection of wines from renowned vineyards</p>
+                </div>
+                <div class="feature">
+                    <h3>✨ Elegant Ambiance</h3>
+                    <p>Sophisticated atmosphere perfect for special occasions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            
+            <div class="menu-category">
+                <h3>Appetizers</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h4>Truffle Risotto Balls</h4>
+                        <p class="price">$14</p>
+                        <p class="description">Crispy golden balls filled with creamy truffle risotto and parmesan</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Pan-Seared Scallops</h4>
+                        <p class="price">$18</p>
+                        <p class="description">Fresh scallops with lemon butter sauce and microgreens</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Burrata Salad</h4>
+                        <p class="price">$12</p>
+                        <p class="description">Creamy burrata cheese with heirloom tomatoes and basil oil</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Main Courses</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h4>Prime Ribeye Steak</h4>
+                        <p class="price">$45</p>
+                        <p class="description">16oz USDA Prime cut, perfectly seared with roasted vegetables</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Pan-Roasted Salmon</h4>
+                        <p class="price">$38</p>
+                        <p class="description">Fresh Atlantic salmon with dill cream sauce and seasonal vegetables</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Truffle Pasta Carbonara</h4>
+                        <p class="price">$32</p>
+                        <p class="description">Homemade pasta with black truffle, guanciale, and pecorino</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Herb-Crusted Lamb Chops</h4>
+                        <p class="price">$42</p>
+                        <p class="description">New Zealand lamb with rosemary crust and red wine reduction</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Desserts</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <h4>Chocolate Lava Cake</h4>
+                        <p class="price">$10</p>
+                        <p class="description">Warm chocolate cake with molten center and vanilla ice cream</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Lemon Tart</h4>
+                        <p class="price">$9</p>
+                        <p class="description">Buttery shortcrust with tangy lemon curd and meringue</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Vanilla Panna Cotta</h4>
+                        <p class="price">$8</p>
+                        <p class="description">Silky smooth panna cotta with berry compote</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reserve" class="reservation">
+        <div class="container">
+            <h2>Reserve Your Table</h2>
+            <form class="reservation-form" onsubmit="handleReservation(event)">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number" id="guests" name="guests" min="1" max="10" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Special Requests</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Any dietary restrictions or special occasions?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Reserve Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📍 Location</h3>
+                    <p>123 Culinary Street<br>Foodie City, FC 12345</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📞 Phone</h3>
+                    <p>(555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p>reservations@deliciousbites.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>⏰ Hours</h3>
+                    <p>Tue-Thu: 5pm - 11pm<br>Fri-Sat: 5pm - 12am<br>Sun-Mon: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Delicious Bites. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
